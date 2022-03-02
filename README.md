@@ -1,10 +1,10 @@
 # Typescript part 3
 
-This contains the slide deck ([`slides/index.md`](slides/index.md) - built with <https://marp.app/>) and a `create-react-app` app to use for code examples for the "Typescript part 3" presentation.
+This contains the slide deck ([`slides/index.md`](slides/index.md) - built with <https://marp.app/>) and a `create-next-app` app to use for code examples for the "Typescript part 3" presentation.
 
 ## NPM scripts
 
-### `npm start`
+### `npm dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.

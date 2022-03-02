@@ -17,6 +17,8 @@ style: |
 
 ## Topics
 
+TODO: reorganize these once I confirm what all parts 1 and 2 covered
+
 - JSON
 - Type definitions
 - Conditional Types
@@ -112,3 +114,4 @@ Using both TSC and SWC/etc.
 
 - <https://www.typescriptlang.org/docs/handbook/decorators.html>
 - Decorators do _not_ change what the typescript type of something is - ie. if you use a class decorator to add a new property, typescript won't know about it
+- Commonly used with [Angular](https://angular.io/api/core/Component) and [NestJS](https://docs.nestjs.com/controllers#routing) (among other libraries)

@@ -42,7 +42,7 @@ const getLabelOfFirstCar = (garage: Garage) => {
             return vehicle.label;
         }
 
-        // can't do this because we don't know it's a bus - if Vehicle.Union didn't contain Motorcycle, this would be valid
+        // can't do this because we don't know it's a bus - if Vehicle.Union didn't contain Motorcycle, this would be valid since we already returned if it was a Car
         // const p = vehicle.passengers;
     }
 }

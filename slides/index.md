@@ -42,10 +42,11 @@ TODO: reorganize these once I confirm what all parts 1 and 2 covered
 ## Exploring available type definitions
 
 - Some libraries include their own types
-- Those that don't but are popular often have them available on https://github.com/DefinitelyTyped/DefinitelyTyped/.
+- Those that don't but are popular often have them available on <https://github.com/DefinitelyTyped/DefinitelyTyped/>.
   - These should always be added as devDependencies, even if the library itself is a non-dev dependency
-- React -> @types/react
-- @babel/core -> @types/babel__core
+    - `react` -> `@types/react`
+    - `@babel/core` -> `@types/babel__core`
+- If you dig into them (ie. ctrl-click in VSCode), some complex libraries (ie. React) _will_ appear overwhelming.
 
 ---
 
@@ -70,9 +71,9 @@ TODO: reorganize these once I confirm what all parts 1 and 2 covered
     - Any lets you do whatever you want with it
   - T | never ⇒ T
   - T & unknown ⇒ T
-  - Use never in positions where there will not or should not be a value.
-  - Use unknown where there will be a value, but it might have any type.
-  - Avoid using any unless you really need an unsafe escape hatch.
+  - Use never in when there will not or should not be a value.
+  - Use unknown when there will be a value, but it might have any type.
+  - Avoid using any unless you really need to (ie. integrating with a library with no or incomplete types)
 
 ---
 

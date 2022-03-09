@@ -14,8 +14,11 @@ You may also see any lint errors in the console.
 
 ### `npm run deck`
 
-Launches `marp` showing `slides/index.md` as a slideshow.
+Launches `marp` showing `slides/index.md` as a slideshow at [http://localhost:5000](http://localhost:5000)
 
 ### `npm run all`
 
 Runs `npm start` and `npm run deck` at the same time.
+
+- UI @ [http://localhost:3000](http://localhost:3000)
+- slides @ [http://localhost:5000](http://localhost:5000)

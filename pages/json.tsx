@@ -1,18 +1,5 @@
+import { tryCall } from "../components/tryCall";
 import { Car, Garage } from "../models";
-
-const tryCall = (toCall: () => any) => {
-    try {
-        return <code><pre>{JSON.stringify(toCall(), null, 2)}</pre></code>
-    } catch(e) {
-        return (
-            <code style={ { color: "red" }}>
-                <pre>
-                    {(e instanceof Error) ? e.toString() : 'Unknown Error'}
-                </pre>
-            </code>
-        )
-    }
-}
 
 const jsonValidCar = `{ "type": "car", "color": "purple", "label": "Bill's car" }`;
 const jsonValidBus = `{ "type": "bus", "color": "blue", "passengers": 45 }`;

@@ -27,8 +27,6 @@ export type Vehicle = Static<typeof Vehicle>;
 
 export const Garage = Record({
     vehicles: Array(Vehicle),
-    temperature: Number,
+    numberOfDoors: Number,
 });
 export type Garage = Static<typeof Garage>;
-
-

@@ -7,8 +7,8 @@ const jsonInvalidCar = `{ "type": "car", "color": "red", "passengers": 45 }`;
 const jsonInvalidBus = `{ "type": "bus", "passengers": 45 }`;
 const jsonInvalidVehicle = `{ "color": "red", "passengers": 45 }`;
 const invalidJson = `{ vehicles: [] }`; // not valid - JSON has to have quoted properties
-const jsonValidGarage = `{ "vehicles": [ ${jsonValidBus}, ${jsonValidCar} ], "temperature": 45.2 }`;
-const jsonInvalidGarage = `{ "vehicles": [ ${jsonInvalidCar}, ${jsonInvalidBus}, ${jsonInvalidVehicle} ], "temperature": 45.2 }`;
+const jsonValidGarage = `{ "vehicles": [ ${jsonValidBus}, ${jsonValidCar} ], "numberOfDoors": 2 }`;
+const jsonInvalidGarage = `{ "vehicles": [ ${jsonInvalidCar}, ${jsonInvalidBus}, ${jsonInvalidVehicle} ], "numberOfDoors": 2 }`;
 
 const parseAsGarage = (json: string): Garage => {
     return JSON.parse(json) as Garage;

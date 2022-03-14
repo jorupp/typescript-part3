@@ -39,6 +39,7 @@ Advanced typescript concepts
 - Decorators
 - Linting/formatting options
 - Splitting compile + type-check steps
+- Getting help
 
 ---
 
@@ -132,3 +133,24 @@ Use [`prettier`](https://prettier.io/) to format your code.  You can configure i
 - Webpack with ts-loader (ie. what you get with `create-react-app`) does the typescript compilation and type checking
 - Some other tools (ie. SWC/esbuild/bun/deno) don't always run full type-checking for typescript and have you run `tsc -noEmit` separately to get type-checking
   - Ie. Remix's default config sets [`noEmit:true`](https://github.com/Rightpoint/expert-finder/blob/6b57c35eb40877abcd9df038cb02276b016b5807/tsconfig.json#L17-L18) and has you run tsc yourself as a [separate npm script](https://github.com/Rightpoint/expert-finder/blob/6b57c35eb40877abcd9df038cb02276b016b5807/package.json#L11-L14)
+
+---
+
+## Getting help
+
+- [`#dev`](https://rightpointlabs.slack.com/archives/C025Y38TR) and [`#dev-frontend`](https://rightpointlabs.slack.com/archives/CCA1EDEAE) on Slack are great places to start.
+  - `#dev` generally, and `#dev-frontend` for UI-specific libs, but can cross-post
+- a focused example of the issue can make it easier for someone to help
+  - <https://www.typescriptlang.org/play> - useful for focused issues with types
+  - <https://codesandbox.io/> - can import libs and build out a small project to show the issue
+- [(WIP) Frontend assessment](https://rpo365-my.sharepoint.com/:x:/r/personal/jjenson_rightpoint_com/_layouts/15/doc2.aspx?sourcedoc=%7Bde5320f1-6aa0-4a65-b2b9-37f29f0ba0b7%7D) - includes links to this series of talks and other resources
+
+---
+
+## Questions or further discussions
+
+Next week will be part 4 of the Typescript series, covering Tooling and the `*-best-practices` repos.
+
+- [`rp-react-best-practices`](https://github.com/Rightpoint/rp-react-best-practices)
+- [`nextjs-best-practices`](https://github.com/Rightpoint/nextjs-best-practices)
+- [`rp-angular-best-practices`](https://github.com/Rightpoint/rp-angular-best-practices)

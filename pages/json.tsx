@@ -11,42 +11,56 @@ const jsonValidGarage = `{ "vehicles": [ ${jsonValidBus}, ${jsonValidCar} ], "nu
 const jsonInvalidGarage = `{ "vehicles": [ ${jsonInvalidCar}, ${jsonInvalidBus}, ${jsonInvalidVehicle} ], "numberOfDoors": 2 }`;
 
 const parseAsGarage = (json: string): Garage => {
-    return JSON.parse(json) as Garage;
-}
+  return JSON.parse(json) as Garage;
+};
 
 const parseAndValidateAsGarage = (json: string): Garage => {
-    return Garage.check(JSON.parse(json));
-}
+  return Garage.check(JSON.parse(json));
+};
 
 // example of using the generated guard method
 const getLabelOfFirstCar = (garage: Garage) => {
-    for(const vehicle of garage.vehicles) {
-        // can't do this here because we don't know this is a car yet
-        // const l = vehicle.label;
+  for (const vehicle of garage.vehicles) {
+    // can't do this here because we don't know this is a car yet
+    // const l = vehicle.label;
 
-        if (Car.guard(vehicle)) {
-            // *can* do this because we now know this is a car
-            return vehicle.label;
-        }
-
-        // can't do this because we don't know it's a bus - if Vehicle.Union didn't contain Motorcycle, this would be valid since we already returned if it was a Car
-        // const p = vehicle.passengers;
+    if (Car.guard(vehicle)) {
+      // *can* do this because we now know this is a car
+      return vehicle.label;
     }
-}
 
-const JsonPage = () => <div>
-    <h2><code>parseAsGarage</code> for invalid JSON</h2>
+    // can't do this because we don't know it's a bus - if Vehicle.Union didn't contain Motorcycle, this would be valid since we already returned if it was a Car
+    // const p = vehicle.passengers;
+  }
+};
+
+const JsonPage = () => (
+  <div>
+    <h2>
+      <code>parseAsGarage</code> for invalid JSON
+    </h2>
     {tryCall(() => parseAsGarage(invalidJson))}
-    <h2><code>parseAsGarage</code> for valid garage</h2>
+    <h2>
+      <code>parseAsGarage</code> for valid garage
+    </h2>
     {tryCall(() => parseAsGarage(jsonValidGarage))}
-    <h2><code>parseAsGarage</code> for invalid garage</h2>
+    <h2>
+      <code>parseAsGarage</code> for invalid garage
+    </h2>
     {tryCall(() => parseAsGarage(jsonInvalidGarage))}
-    <h2><code>parseAndValidateAsGarage</code> for invalid JSON</h2>
+    <h2>
+      <code>parseAndValidateAsGarage</code> for invalid JSON
+    </h2>
     {tryCall(() => parseAndValidateAsGarage(invalidJson))}
-    <h2><code>parseAndValidateAsGarage</code> for valid garage</h2>
+    <h2>
+      <code>parseAndValidateAsGarage</code> for valid garage
+    </h2>
     {tryCall(() => parseAndValidateAsGarage(jsonValidGarage))}
-    <h2><code>parseAndValidateAsGarage</code> for invalid garage</h2>
+    <h2>
+      <code>parseAndValidateAsGarage</code> for invalid garage
+    </h2>
     {tryCall(() => parseAndValidateAsGarage(jsonInvalidGarage))}
-</div>
+  </div>
+);
 
 export default JsonPage;

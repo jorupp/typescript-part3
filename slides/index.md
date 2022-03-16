@@ -88,7 +88,7 @@ Examples: [`/pages/escape.tsx`](/pages/escape.tsx)
 - Cannot cast with `<Account>a` in `.tsx` files, must use `a as Account` - [they work the same](https://www.typescriptlang.org/docs/handbook/jsx.html#the-as-operator)
   - example: [`/components/castTest.ts`](/components/castTest.ts)[`(x)`](/components/castTest.tsx)
 - The first character of tag indicates the type - [lower-case == HTML element, upper-case == React component](https://www.typescriptlang.org/docs/handbook/jsx.html#type-checking) - ie. `<footer>` vs `<Footer>`
-  - example: [`/components/customElements.tsx`](/components/customElements.tsx)
+  - example: [`/pages/customElements.tsx`](/pages/customElements.tsx)
 
 ---
 

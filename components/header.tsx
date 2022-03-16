@@ -14,6 +14,9 @@ const Header = () => {
         <Link href="/escape">Escape</Link>
       </li>
       <li>
+        <Link href="/customElements">Custom Elements</Link>
+      </li>
+      <li>
         <Link href="/ref">Ref</Link>
       </li>
     </ul>

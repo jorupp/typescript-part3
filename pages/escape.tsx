@@ -27,6 +27,11 @@ const EscapePage = () => (
       Use <code>any</code> to pass an invalid value to the method
     </h3>
     {tryCall(() => processType("bird" as any))}
+    <h3>
+      Can also use <code>unknown</code> plus a cast to a valid value to pass an
+      invalid value to the method
+    </h3>
+    {tryCall(() => processType("bird" as unknown as "cat"))}
   </div>
 );
 

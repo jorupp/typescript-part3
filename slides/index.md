@@ -13,6 +13,8 @@ style: |
 
 Advanced typescript concepts
 
+<https://github.com/jorupp/typescript-part3>
+
 ---
 
 ## Topics already covered in part 1 and 2
@@ -133,16 +135,18 @@ Use [`prettier`](https://prettier.io/) to format your code.  You can configure i
 - Webpack with ts-loader (ie. what you get with `create-react-app`) does the typescript compilation and type checking
 - Some other tools (ie. SWC/esbuild/bun/deno) don't always run full type-checking for typescript and have you run `tsc -noEmit` separately to get type-checking
   - Ie. Remix's default config sets [`noEmit:true`](https://github.com/Rightpoint/expert-finder/blob/6b57c35eb40877abcd9df038cb02276b016b5807/tsconfig.json#L17-L18) and has you run tsc yourself as a [separate npm script](https://github.com/Rightpoint/expert-finder/blob/6b57c35eb40877abcd9df038cb02276b016b5807/package.json#L11-L14)
+  - [`concurrently`](https://www.npmjs.com/package/concurrently) is a nice tool to run several things at once from a NPM script entry
 
 ---
 
 ## Getting help
 
-- [`#dev`](https://rightpointlabs.slack.com/archives/C025Y38TR) and [`#dev-frontend`](https://rightpointlabs.slack.com/archives/CCA1EDEAE) on Slack are great places to start.
-  - `#dev` generally, and `#dev-frontend` for UI-specific libs, but can cross-post
+- Slack is a great place to start - two main channels - encourage you to join these
+  - [`#dev`](https://rightpointlabs.slack.com/archives/C025Y38TR) for general dev topics (ie. Javascript/Typescript)
+  - [`#dev-frontend`](https://rightpointlabs.slack.com/archives/CCA1EDEAE) for UI-specific libs/topics (ie. React/Angular/CSS)
 - a focused example of the issue can make it easier for someone to help
   - <https://www.typescriptlang.org/play> - useful for focused issues with types
-  - <https://codesandbox.io/> - can import libs and build out a small project to show the issue
+  - <https://codesandbox.io/> - can import libs and build out a small project to show the issue with full VSCode intellisense in your browser - [(example)](https://codesandbox.io/s/condescending-shadow-3hy8db)
 - [(WIP) Frontend assessment](https://rpo365-my.sharepoint.com/:x:/r/personal/jjenson_rightpoint_com/_layouts/15/doc2.aspx?sourcedoc=%7Bde5320f1-6aa0-4a65-b2b9-37f29f0ba0b7%7D) - includes links to this series of talks and other resources
 
 ---
